@@ -32,6 +32,13 @@ namespace ExerciseTests
             List<StudentViewModel> allStudentVms = vm.GetAll();
             Assert.True(allStudentVms.Count > 0);
         }
+  /*      [Fact]
+        public void Division_GetAllTest()
+        {
+            DivisionViewModel vm = new DivisionViewModel();
+            List<DivisionViewModel> allStudentVms = vm.GetAll();
+            Assert.True(allStudentVms.Count > 0);
+        }*/
 
         [Fact]
         public void Student_AddTest()

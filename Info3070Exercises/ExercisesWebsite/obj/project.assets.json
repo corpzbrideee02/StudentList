@@ -7338,11 +7338,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesWebsite\\ExercisesWebsite.csproj",
+      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesWebsite\\ExercisesWebsite.csproj",
       "projectName": "ExercisesWebsite",
-      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesWebsite\\ExercisesWebsite.csproj",
+      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesWebsite\\ExercisesWebsite.csproj",
       "packagesPath": "C:\\Users\\d_cor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesWebsite\\obj\\",
+      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesWebsite\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\d_cor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7358,8 +7358,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesViewModels\\ExercisesViewModels.csproj": {
-              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesViewModels\\ExercisesViewModels.csproj"
+            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesViewModels\\ExercisesViewModels.csproj": {
+              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesViewModels\\ExercisesViewModels.csproj"
             }
           }
         }

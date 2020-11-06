@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ExercisesDAL
 {
-    public partial class Divisions:SchoolEntity
+    public partial class Divisions: SchoolEntity
     {
         public Divisions()
         {

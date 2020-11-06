@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4i5lS7KclTo1G7LXB/NQWPctbM++ghvadzhSqLW6Oz+dyyrhVpc8rk5MSLui1C/A8FwNjw7CEn1oHeFcA8l5Eg==",
+  "dgSpecHash": "gRDyNJRW0A4MBS+F17wlE2Q/4qxa6EmdDBaRwt3BybXKzpGALDapQfXYZb6wyJjIlPkykQuJIbA/ZyfQsdAVvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExerciseTests\\ExerciseTests.csproj",
+  "projectFilePath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExerciseTests\\ExerciseTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\d_cor\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\d_cor\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

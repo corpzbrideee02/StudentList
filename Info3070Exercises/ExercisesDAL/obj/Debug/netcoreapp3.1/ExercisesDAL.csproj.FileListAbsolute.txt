@@ -10,3 +10,15 @@ C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Info3070Exercises\
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.dll
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.pdb
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.genruntimeconfig.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\bin\Debug\netcoreapp3.1\ExercisesDAL.deps.json
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\bin\Debug\netcoreapp3.1\ExercisesDAL.runtimeconfig.json
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\bin\Debug\netcoreapp3.1\ExercisesDAL.runtimeconfig.dev.json
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\bin\Debug\netcoreapp3.1\ExercisesDAL.dll
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\bin\Debug\netcoreapp3.1\ExercisesDAL.pdb
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.csprojAssemblyReference.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.AssemblyInfoInputs.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.AssemblyInfo.cs
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.csproj.CoreCompileInputs.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.dll
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.pdb
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesDAL\obj\Debug\netcoreapp3.1\ExercisesDAL.genruntimeconfig.cache

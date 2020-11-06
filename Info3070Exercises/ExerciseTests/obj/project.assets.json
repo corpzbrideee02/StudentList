@@ -8166,11 +8166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExerciseTests\\ExerciseTests.csproj",
+      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExerciseTests\\ExerciseTests.csproj",
       "projectName": "ExerciseTests",
-      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExerciseTests\\ExerciseTests.csproj",
+      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExerciseTests\\ExerciseTests.csproj",
       "packagesPath": "C:\\Users\\d_cor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExerciseTests\\obj\\",
+      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExerciseTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\d_cor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8186,11 +8186,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesDAL\\ExercisesDAL.csproj": {
-              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesDAL\\ExercisesDAL.csproj"
+            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesDAL\\ExercisesDAL.csproj": {
+              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesDAL\\ExercisesDAL.csproj"
             },
-            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesViewModels\\ExercisesViewModels.csproj": {
-              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesViewModels\\ExercisesViewModels.csproj"
+            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesViewModels\\ExercisesViewModels.csproj": {
+              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesViewModels\\ExercisesViewModels.csproj"
             }
           }
         }

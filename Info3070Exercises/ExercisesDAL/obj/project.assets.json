@@ -7372,11 +7372,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesDAL\\ExercisesDAL.csproj",
+      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesDAL\\ExercisesDAL.csproj",
       "projectName": "ExercisesDAL",
-      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesDAL\\ExercisesDAL.csproj",
+      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesDAL\\ExercisesDAL.csproj",
       "packagesPath": "C:\\Users\\d_cor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Info3070Exercises\\ExercisesDAL\\obj\\",
+      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Info3070Exercises\\ExercisesDAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\d_cor\\AppData\\Roaming\\NuGet\\NuGet.Config",

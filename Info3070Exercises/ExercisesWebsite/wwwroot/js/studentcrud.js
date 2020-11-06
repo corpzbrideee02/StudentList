@@ -16,6 +16,19 @@ $(function () { // studentaddupdate.js
 			} else { // else 404 not found
 				$("#status").text("no such path on server");
 			} // else
+
+			//get division data
+			response = await fetch(`api/division`);
+			if (response.ok) {
+				let divs = await response.json(); // this return a promise, so we await it
+				sessionStorage.setItem("alldivisions", JSON.stringify(divs));
+			} else if (response.status !== 404) { // probably some other client side error
+				let problemJson = await response.json();
+				errorRtn(problemJson, response.status);
+			} else { // else 404 not found
+				$("#status").text("no such path on server");
+			} // else
+
 		} catch (error) {
 			$("#status").text(error.message);
 		}
@@ -33,10 +46,13 @@ $(function () { // studentaddupdate.js
 				$("#TextBoxLastname").val(student.lastname);
 				$("#TextBoxPhone").val(student.phoneno);
 				$("#TextBoxEmail").val(student.email);
+
 				sessionStorage.setItem("id", student.id);
 				sessionStorage.setItem("divisionId", student.divisionId);
 				sessionStorage.setItem("timer", student.timer);
 				$("#modalstatus").text("update data");
+
+				loadDivisionDDL(student.divisionId.toString());
 				$("#theModal").modal("toggle");
 			} // if
 		}); // data.map
@@ -55,6 +71,7 @@ $(function () { // studentaddupdate.js
 	}; // setupForAdd
 
 	const clearModalFields = () => {
+		loadDivisionDDL(-1);
 		$("#TextBoxTitle").val("");
 		$("#TextBoxFirstname").val("");
 		$("#TextBoxLastname").val("");
@@ -63,6 +80,7 @@ $(function () { // studentaddupdate.js
 		sessionStorage.removeItem("id");
 		sessionStorage.removeItem("divisionId");
 		sessionStorage.removeItem("timer");
+	
 	}; // clearModalFields
 
 	const add = async () => {
@@ -73,7 +91,7 @@ $(function () { // studentaddupdate.js
 			stu.lastname = $("#TextBoxLastname").val();
 			stu.phoneno = $("#TextBoxPhone").val();
 			stu.email = $("#TextBoxEmail").val();
-			stu.divisionId = 10; // hard code it for now, we"ll add a dropdown later
+			stu.divisionId = parseInt($("#ddlDivisions").val());
 			stu.id = -1;
 			stu.timer = null;
 			stu.picture64 = null;
@@ -113,6 +131,7 @@ $(function () { // studentaddupdate.js
 			stu.lastname = $("#TextBoxLastname").val();
 			stu.phoneno = $("#TextBoxPhone").val();
 			stu.email = $("#TextBoxEmail").val();
+			stu.divisionId = parseInt($("#ddlDivisions").val());
 			// we stored these 3 earlier
 			stu.id = parseInt(sessionStorage.getItem("id"));
 			stu.divisionId = parseInt(sessionStorage.getItem("divisionId"));
@@ -165,13 +184,21 @@ $(function () { // studentaddupdate.js
 		$("#theModal").modal("toggle");
 	};//delete
 
+	const loadDivisionDDL = (studiv) => {
+		html = '';
+		$('#ddlDivisions').empty();
+		let alldivisions = JSON.parse(sessionStorage.getItem('alldivisions'));
+		alldivisions.map(div => html += `<option value="${div.id}">${div.name}</option>`);
+		$('#ddlDivisions').append(html);
+		$('#ddlDivisions').val(studiv);
+	};//loadDivisionDDL
 
 	$("#actionbutton").click(() => {
 		$("#actionbutton").val() === "update" ? update() : add();
 	});
 
-	$('[data-toggle-confirmation]').confirmation({ rootSelector: '[data-toggle-confirmation]' });
-	$('#deletebutton').click(() => delete ());// if yes was chosen
+	$('[data-toggle=confirmation]').confirmation({ rootSelector: '[data-toggle=confirmation]' });
+	$('#deletebutton').click(() => _delete ());// if yes was chosen
 
 	$("#studentList").click((e) => {
 		if (!e) e = window.event;
@@ -191,8 +218,8 @@ $(function () { // studentaddupdate.js
 		div = $(`<div class="list-group-item text-white bg-secondary row d-flex" id="status">Student Info</div>
 			<div class= "list-group-item row d-flex text-center" id="heading">
 			<div class="col-4 h4">Title</div>
-			<div class="col-4 h4>First</div>
-			<div class="col-4 h4>Last</div>
+			<div class="col-4 h4">First</div>
+			<div class="col-4 h4">Last</div>
 		</div>`);
 		div.appendTo($("#studentList"));
 		sessionStorage.setItem("allstudents", JSON.stringify(data));

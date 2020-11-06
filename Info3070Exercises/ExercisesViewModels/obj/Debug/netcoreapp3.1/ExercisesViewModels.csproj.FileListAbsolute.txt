@@ -10,3 +10,15 @@ C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Info3070Exercises\
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.csproj.CopyComplete
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.dll
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.pdb
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\bin\Debug\netcoreapp3.1\ExercisesViewModels.deps.json
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\bin\Debug\netcoreapp3.1\ExercisesViewModels.dll
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\bin\Debug\netcoreapp3.1\ExercisesViewModels.pdb
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\bin\Debug\netcoreapp3.1\ExercisesDAL.dll
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\bin\Debug\netcoreapp3.1\ExercisesDAL.pdb
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.csprojAssemblyReference.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.AssemblyInfoInputs.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.AssemblyInfo.cs
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.csproj.CoreCompileInputs.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.csproj.CopyComplete
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.dll
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Info3070Exercises\ExercisesViewModels\obj\Debug\netcoreapp3.1\ExercisesViewModels.pdb
