@@ -103,11 +103,11 @@
 
 	const buildEmployeeList = (data) => {
 		$("#employeeList").empty();
-		div = $(`<div class="list-group-item text-white bg-secondary row d-flex" id="status">Employee Info</div>
+		div = $(`<div class="list-group-item text-white row d-flex" id="status" style="background-color:#21768D;">Employee Info</div>
 					<div class= "list-group-item row d-flex text-center" id="heading">
 					<div class="col-4 h4">Title</div>
-					<div class="col-4 h4">First</div>
-					<div class="col-4 h4">Last</div>
+					<div class="col-4 h4">First Name</div>
+					<div class="col-4 h4">Last Name</div>
 				</div>`);
 		div.appendTo($("#employeeList"));
 		sessionStorage.setItem("allemployees", JSON.stringify(data));

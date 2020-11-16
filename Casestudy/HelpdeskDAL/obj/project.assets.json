@@ -7372,11 +7372,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj",
+      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj",
       "projectName": "HelpdeskDAL",
-      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj",
+      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj",
       "packagesPath": "C:\\Users\\d_cor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskDAL\\obj\\",
+      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskDAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\d_cor\\AppData\\Roaming\\NuGet\\NuGet.Config",

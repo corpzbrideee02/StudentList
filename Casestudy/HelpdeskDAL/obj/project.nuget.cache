@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qp2fmoj81AywIGxBq3dFYENE5jmnDkVO/KyqkSrswdrBp2dy7PqwSJ2EWNFtC/BV/2yH6z9Q6cu85SQmnuL66A==",
+  "dgSpecHash": "jiReeuAlRFPFvEUt+jTyy53TFiWZwFBD4Tyh9ZW9NY1roG0VXd05gZGVjBfLHUs1+jToch1+W93cxRy9oLaXYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj",
+  "projectFilePath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\d_cor\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\d_cor\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

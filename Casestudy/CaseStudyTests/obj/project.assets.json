@@ -8166,11 +8166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\CaseStudyTests\\CaseStudyTests.csproj",
+      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\CaseStudyTests\\CaseStudyTests.csproj",
       "projectName": "CaseStudyTests",
-      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\CaseStudyTests\\CaseStudyTests.csproj",
+      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\CaseStudyTests\\CaseStudyTests.csproj",
       "packagesPath": "C:\\Users\\d_cor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\CaseStudyTests\\obj\\",
+      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\CaseStudyTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\d_cor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8186,11 +8186,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj": {
-              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj"
+            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj": {
+              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskDAL\\HelpdeskDAL.csproj"
             },
-            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj": {
-              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj"
+            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj": {
+              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj"
             }
           }
         }

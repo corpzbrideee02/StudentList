@@ -9,7 +9,7 @@ $(function () { // employeeaddupdate.js
 				let payload = await response.json(); // this return a promise, so we await it
 				buildEmployeeList(payload);
 				msg === "" ? // are we appending to an existing message
-					$("#status").text("employees Loaded") : $("#status").text(`${msg} - employee Loaded`);
+					$("#status").text("Employees Loaded") : $("#status").text(`${msg} - Employee Loaded`);
 			} else if (response.status !== 404) { // probably some other client side error
 				let problemJson = await response.json();
 				errorRtn(problemJson, response.status);
@@ -23,7 +23,7 @@ $(function () { // employeeaddupdate.js
 
 	const setupForUpdate = (id, data) => {
 		$("#actionbutton").val("update");
-		$("#modaltitle").html("<h4>update employee</h4>");
+		$("#modaltitle").html("<h4>Update Employee</h4>");
 
 		clearModalFields();
 		data.map(employee => {
@@ -44,9 +44,9 @@ $(function () { // employeeaddupdate.js
 
 	const setupForAdd = () => {
 		$("#actionbutton").val("add");
-		$("#modaltitle").html("<h4>add employee</h4>");
+		$("#modaltitle").html("<h4>Add Employee</h4>");
 		$("#theModal").modal("toggle");
-		$("#modalstatus").text("add new employee");
+		$("#modalstatus").text("Add New Employee");
 		clearModalFields();
 	}; // setupForAdd
 
@@ -155,17 +155,26 @@ $(function () { // employeeaddupdate.js
 		}
 	}); // employeeList click
 	const buildEmployeeList = (data) => {
+
+
+		btn = $(`<button class="list-group-item row d-flex" id="0"><img class="card-img" src="img/stu.png" alt="Add Employee" style="width:5%; margin:0 auto;"></button>`);
+		
 		$("#employeeList").empty();
-		div = $(`<div class="list-group-item text-white bg-secondary row d-flex" id="status">employee Info</div>
+		btn.appendTo($("#employeeList"));
+
+		div = $(`<div class="list-group-item text-white row d-flex" id="status" style="background-color:#21768D;">Employee Information</div>
 			<div class= "list-group-item row d-flex text-center" id="heading">
 			<div class="col-4 h4">Title</div>
-			<div class="col-4 h4>First</div>
-			<div class="col-4 h4>Last</div>
+			<div class="col-4 h4">First Name</div>
+			<div class="col-4 h4">Last Name</div>
 		</div>`);
 		div.appendTo($("#employeeList"));
+
 		sessionStorage.setItem("allemployees", JSON.stringify(data));
-		btn = $(`<button class="list-group-item row d-flex" id="0"><div class="col-12 text-left">...click to add employee</div></button>`);
-		btn.appendTo($("#employeeList"));
+
+
+	/*btn.appendTo($("#employeeList"));*/
+
 		data.map(emp => {
 			btn = $(`<button class="list-group-item row d-flex" id="${emp.id}">`);
 			btn.html(`<div class="col-4" id="employeetitle${emp.id}">${emp.title}</div>

@@ -144,7 +144,7 @@ namespace HelpdeskViewModels
                     empVm.Email = emp.Email;
                     empVm.Id = emp.Id;
                     empVm.DepartmentId = emp.DepartmentId;
-                   // empVm.DepartmentName = emp.Department.DepartmentName;
+                     empVm.DepartmentName = emp.Department.DepartmentName;
                     empVm.Timer = Convert.ToBase64String(emp.Timer);
                     allVms.Add(empVm);
                 }

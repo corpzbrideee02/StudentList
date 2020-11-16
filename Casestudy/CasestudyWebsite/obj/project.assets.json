@@ -7338,11 +7338,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\CasestudyWebsite\\CasestudyWebsite.csproj",
+      "projectUniqueName": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\CasestudyWebsite\\CasestudyWebsite.csproj",
       "projectName": "CasestudyWebsite",
-      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\CasestudyWebsite\\CasestudyWebsite.csproj",
+      "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\CasestudyWebsite\\CasestudyWebsite.csproj",
       "packagesPath": "C:\\Users\\d_cor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\CasestudyWebsite\\obj\\",
+      "outputPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\CasestudyWebsite\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\d_cor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7358,8 +7358,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj": {
-              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj"
+            "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj": {
+              "projectPath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj"
             }
           }
         }

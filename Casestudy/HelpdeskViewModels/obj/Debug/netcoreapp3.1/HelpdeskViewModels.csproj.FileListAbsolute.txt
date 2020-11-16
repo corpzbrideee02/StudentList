@@ -10,3 +10,15 @@ C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Casestudy\Helpdesk
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.csproj.CopyComplete
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.dll
 C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.pdb
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskViewModels.deps.json
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskViewModels.dll
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskViewModels.pdb
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskDAL.dll
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\bin\Debug\netcoreapp3.1\HelpdeskDAL.pdb
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.csprojAssemblyReference.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.AssemblyInfoInputs.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.AssemblyInfo.cs
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.csproj.CoreCompileInputs.cache
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.csproj.CopyComplete
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.dll
+C:\Users\d_cor\Desktop\All files\Dianne\3rd sem\client server\StudentList\Casestudy\HelpdeskViewModels\obj\Debug\netcoreapp3.1\HelpdeskViewModels.pdb

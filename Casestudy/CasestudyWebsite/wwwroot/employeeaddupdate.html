@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="#">Info3070Exercises</a>
+    <nav class="navbar navbar-expand-md navbar-dark bg-info">
+        <a class="navbar-brand" href="/home.html">Case Study</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,7 +18,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/employeelookup.html">Original Lookup</a>
                 </li>
-         
+
                 <li class="nav-item">
                     <a class="nav-link" href="/employee.html">Employees</a>
                 </li>
@@ -28,9 +28,17 @@
             </ul>
         </div>
     </nav>
-    <div class="justify-content-center align-items-center row m-1">
-        <div class="col-12 text-center p-3"><h2>Current Employees</h2></div>
-        <div class="list-group col-10" id="employeeList">
+
+
+
+    <div class="card">
+        <div class="justify-content-center align-items-center row m-1">
+            <div class="col-12 text-center text-info p-3"><h2>Current Employees</h2></div>
+            <div class="list-group col-10" id="employeeList"> </div>
+        </div>
+
+        <div class="card-footer bg-info text-center text-white" style="margin-top:3%;">
+            <label>	&copy; 2019 - INFO-3070</label>
         </div>
     </div>
 
@@ -46,7 +54,7 @@
                 <div class="modal-body">
                     <div class="mx-4 my-4">
                         <div class="card">
-                            <div class="card-header text-center">
+                            <div class="card-header text-center bg-info text-white">
                                 Employee Information
                             </div>
                             <div class="card-body">
@@ -73,9 +81,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-footer text-cebter">
-                        <input type="button" class="btn btn-secondary" value="update" id="actionbutton" />
-                        <div id="modalstatus" class="text-left mt-3 mb-2"></div>
+                    <div class="card-footer text-center">
+                        <input type="button" class="btn btn-info" value="update" id="actionbutton" />
+                        <div id="modalstatus" class="text-center mt-3 mb-2"></div>
                     </div>
                 </div>
             </div>

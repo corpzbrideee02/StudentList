@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bi30ut2vbRHDxb3QdtUUN8m1+bgMa1tFG0ecJNiecrYBah18uwmVj7+5z+NGQh2SjEqoO9bQtiqEbd1axiS+Mw==",
+  "dgSpecHash": "/MStezDObSJC86dcH1MmLGBUGa5JcQYRta009hR0TjZk4OJJm41KjYwiTAMx9J6f+o8RBgLJU2BnJBl+1tIgMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\Casestudy\\CaseStudyTests\\CaseStudyTests.csproj",
+  "projectFilePath": "C:\\Users\\d_cor\\Desktop\\All files\\Dianne\\3rd sem\\client server\\StudentList\\Casestudy\\CaseStudyTests\\CaseStudyTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\d_cor\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\d_cor\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
