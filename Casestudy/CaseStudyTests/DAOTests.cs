@@ -160,6 +160,15 @@ namespace CaseStudyTests
             }
 
         }
+
+
+        [Fact]
+        public void Employees_LoadPicsTest()
+        {
+            DALUtil util = new DALUtil();
+            Assert.True(util.AddEmployeePicsToDb());
+
+        }
     }
 
 }

@@ -146,6 +146,11 @@ namespace HelpdeskViewModels
                     empVm.DepartmentId = emp.DepartmentId;
                      empVm.DepartmentName = emp.Department.DepartmentName;
                     empVm.Timer = Convert.ToBase64String(emp.Timer);
+                    if (emp.StaffPicture != null)
+                    {
+
+                        empVm.StaffPicture64 = Convert.ToBase64String(emp.StaffPicture);
+                    }
                     allVms.Add(empVm);
                 }
 

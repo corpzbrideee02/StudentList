@@ -20,11 +20,11 @@ namespace ExerciseTests
                 Students selectedStudent = dao.GetByLastName("Pet");
                 Assert.NotNull(selectedStudent);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine("Error - " + ex.Message);
             }
-           
+
         }
 
         [Fact]
@@ -69,10 +69,10 @@ namespace ExerciseTests
                 {
                     FirstName = "Joe",
                     LastName = "Smith",
-                    PhoneNo="(555)555-1234",
-                    Title="Mr.",
-                    DivisionId=10,
-                    Email="el@someschool.com"
+                    PhoneNo = "(555)555-1234",
+                    Title = "Mr.",
+                    DivisionId = 10,
+                    Email = "el@someschool.com"
                 };
                 Assert.True(dao.Add(newStudent) > 0);
             }
@@ -91,7 +91,7 @@ namespace ExerciseTests
                 StudentDAO dao = new StudentDAO();
                 Students studentForUpdate = dao.GetByLastName("Smith");
 
-                if(studentForUpdate!=null)
+                if (studentForUpdate != null)
                 {
                     string oldPhoneNo = studentForUpdate.PhoneNo;
                     string newPhoneNo = oldPhoneNo == "519-555-1234" ? "555-555-5555" : "519-555-1234";
@@ -113,7 +113,7 @@ namespace ExerciseTests
             Students studentForUpdate1 = dao1.GetByLastName("Smith");
             Students studentForUpdate2 = dao2.GetByLastName("Smith");
 
-            if (studentForUpdate1!=null)
+            if (studentForUpdate1 != null)
             {
                 string oldPhoneNo = studentForUpdate1.PhoneNo;
                 string newPhoneNo = oldPhoneNo == "519-555-1234" ? "555-555-5555" : "519-555-1234";
@@ -150,9 +150,15 @@ namespace ExerciseTests
 
         }
 
+        [Fact]
+        public void Student_LoadPicsTest()
+        {
+            DALUtil util = new DALUtil();
+            Assert.True(util.AddStudentPicsToDb());
 
+        }
     }
 
 
-    
-}
+
+  }
