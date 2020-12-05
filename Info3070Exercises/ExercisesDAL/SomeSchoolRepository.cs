@@ -22,6 +22,10 @@ namespace ExercisesDAL
         {
             return _db.Set<T>().ToList();
         }
+        public List<T> GetAll(Expression<Func<T, bool>> match)
+        {
+            return _db.Set<T>().Where(match).ToList();
+        }
 
         public List<T> GetByExpression(Expression<Func<T,bool>>match)
         {
@@ -40,7 +44,7 @@ namespace ExercisesDAL
             try
             {
                 SchoolEntity currentEntity = GetByExpression(entx => entx.Id == updateEntity.Id).FirstOrDefault();
-                    _db.Entry(currentEntity).OriginalValues["Timer"] = updateEntity.Timer;
+                   _db.Entry(currentEntity).OriginalValues["Timer"] = updateEntity.Timer;
                     _db.Entry(currentEntity).CurrentValues.SetValues(updateEntity);
                 if (_db.SaveChanges() == 1)
                 {

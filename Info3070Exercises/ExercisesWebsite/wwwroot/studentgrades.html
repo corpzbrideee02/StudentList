@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grades</title>
+    <meta charset="utf-8" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Info3070Exercises</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/studentlookup.html">Original Lookup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/modalexample.html">Modal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/lab7a.html">Lab7a</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/lab9a.html">Lab9a</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/studentlist.html">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/studentaddupdate.html">Student Add</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/studentcrud.html">Student CRUD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/studentgrades.html">Student Grades</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="justify-content-center align-items-center row m-1">
+        <div class="col-12 text-center p-3"><h2>Current Students</h2></div>
+        <div class="list-group col-10" id="studentList">
+        </div>
+    </div>
+
+    <div class="modal fade text-center mr-3" data backdrop="static" id="theModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <button type="button" class="close float-right" data-dismiss="modal" arial-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-title text-center" id="modaltitle"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="mx-4 my-4">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                SELECT COURSE, ENTER GRADE and COMMENTS
+                            </div>
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <div class="col-4"><strong>First: </strong></div>
+                                    <div class="col-8" id="Firstname"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><strong>Surname: </strong></div>
+                                    <div class="col-8" id="Lastname"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4"><strong>Course:</strong></div>
+                                    <div class="col-8"><select id="ddlCourses" name="ddlCourses" class="form-control"></select></div>
+                                </div>
+
+                                <div class="row" id="MarkRow">
+                                    <div class="col-4"><strong>Mark:</strong></div>
+                                    <div class="col-7"><input type="number" placeholder="mark" id="TextBoxMark" name="TextBoxMark" class="form-control mt-2" min="0" max="100" style="width: 6em" /></div>
+                                </div>
+
+                                <div class="row" id="CommentsRow">
+                                    <div class="col-4"><strong>Comments:</strong></div>
+                                    <div class="text-left col-7">
+                                        <textarea id="TextBoxComments" name="TextBoxComments" class="mt-2 form-control"></textarea>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center mt-2">
+                        <input type="button" class="float-right btn-secondary" value="change grade" id="actionbutton" />
+                        <div id="modalstatus" class="text-left mt-3 mb-2"></div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/bootstrap-confirmation.min.js"></script>
+    <script src="js/studentgrades.js"></script>
+</body>
+</html>

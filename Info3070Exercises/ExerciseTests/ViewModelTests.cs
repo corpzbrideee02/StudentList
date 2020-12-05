@@ -32,13 +32,22 @@ namespace ExerciseTests
             List<StudentViewModel> allStudentVms = vm.GetAll();
             Assert.True(allStudentVms.Count > 0);
         }
-  /*      [Fact]
-        public void Division_GetAllTest()
+
+
+        [Fact]
+        public void Grade_GetAllTest()
         {
-            DivisionViewModel vm = new DivisionViewModel();
-            List<DivisionViewModel> allStudentVms = vm.GetAll();
-            Assert.True(allStudentVms.Count > 0);
-        }*/
+           GradeViewModel vm = new GradeViewModel();
+            List<GradeViewModel> allGradetVms = vm.GetAll(2);
+            Assert.True(allGradetVms.Count > 0);
+        }
+        /*      [Fact]
+              public void Division_GetAllTest()
+              {
+                  DivisionViewModel vm = new DivisionViewModel();
+                  List<DivisionViewModel> allStudentVms = vm.GetAll();
+                  Assert.True(allStudentVms.Count > 0);
+              }*/
 
         [Fact]
         public void Student_AddTest()
@@ -58,13 +67,47 @@ namespace ExerciseTests
         [Fact]
         public void Student_UpdateTest()
         {
-            StudentViewModel vm = new StudentViewModel { Lastname = "Corpuz" };
+            StudentViewModel vm = new StudentViewModel { Lastname = "Pet" };
             vm.GetByLastname();//Student just added
             vm.Phoneno = vm.Phoneno == "(555)555-5551" ? "(555)555-5552" : "(555)555-5551";
             int StudentsUpdated = vm.Update();
            Assert.True(StudentsUpdated > 0);
             
         }
+
+        [Fact]
+        public void Grade_UpdateTest()
+        {
+            GradeViewModel vm = new GradeViewModel { Id = 2 };
+            vm.GetById();
+            vm.Mark = vm.Mark== 88 ? 88 : 66;
+            int GradesUpdated = vm.Update();
+            Assert.True(GradesUpdated > 0);
+
+        }
+        [Fact]
+        public void Grade_ConcurrencyTest()
+        {
+            GradeViewModel vm1 = new GradeViewModel();
+            GradeViewModel vm2 = new GradeViewModel();
+            vm1.Id = 2;
+            vm2.Id = 2;
+
+            vm1.GetById();
+            vm2.GetById();
+           // vm1.Email = (vm1.Email.IndexOf(".ca") > 0) ? "dc@abc.com" : "dc@abc.ca";
+            vm1.Mark = vm1.Mark == 70 ? 99 : 70;
+            if (vm1.Update() == 1)
+            {
+                vm2.Mark = 88;  //we need something different
+                Assert.True(vm2.Update() == -2);    //-2 = stale
+            }
+            else
+                Assert.True(false);
+
+        }
+
+
         [Fact]
         public void Student_DeleteTest()
         {
@@ -79,8 +122,8 @@ namespace ExerciseTests
         {
             StudentViewModel vm1 = new StudentViewModel();
             StudentViewModel vm2 = new StudentViewModel();
-            vm1.Lastname = "Corpuz";
-            vm2.Lastname = "Corpuz";
+            vm1.Lastname = "Pet";
+            vm2.Lastname = "Pet";
 
             vm1.GetByLastname();
             vm2.GetByLastname();

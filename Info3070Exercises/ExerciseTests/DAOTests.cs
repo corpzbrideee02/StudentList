@@ -59,6 +59,39 @@ namespace ExerciseTests
         }
 
         [Fact]
+        public void Course_GetAllTest()
+        {
+            try
+            {
+                CourseDAO dao = new CourseDAO();
+                List<Courses> allCourses = dao.GetAll(2);
+                Assert.True(allCourses.Count > 0);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error - " + ex.Message);
+            }
+
+        }
+
+        [Fact]
+        public void Grades_GetAllTest()
+        {
+            try
+            {
+                GradeDAO dao = new GradeDAO();
+                List<Grades> allGrades = dao.GetAll(2);
+                Assert.True(allGrades.Count > 0);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error - " + ex.Message);
+            }
+
+        }
+
+
+        [Fact]
         public void Student_AddTest()
         {
             try
