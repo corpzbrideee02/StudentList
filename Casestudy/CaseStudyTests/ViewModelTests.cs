@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Text;
 using HelpdeskViewModels;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace CaseStudyTests
 {
     public class ViewModelTests
     {
+        private readonly ITestOutputHelper output;
+
+        public ViewModelTests(ITestOutputHelper output)
+        {
+            this.output = output;
+        }
         [Fact]
         public void Employee_GetByLastNameTest()
         {
@@ -96,5 +103,67 @@ namespace CaseStudyTests
                 Assert.True(false);
 
         }
+
+        [Fact]
+        public void Call_ComprehensiveVMTest()
+        {
+            CallViewModel cvm = new CallViewModel();
+            EmployeeViewModel evm = new EmployeeViewModel();
+            ProblemViewModel pvm = new ProblemViewModel();
+            cvm.DateOpened = DateTime.Now;
+            cvm.DateClosed = null;
+            cvm.OpenStatus = true;
+            evm.Email = "dc@abc.com";
+            evm.GetByEmail();
+            cvm.EmployeeId = evm.Id;
+            evm.Email = "sc@abc.com";
+            evm.GetByEmail();
+            cvm.TechId = evm.Id;
+            pvm.Description = "Memory Upgrade";
+            pvm.GetByDescription();
+            cvm.ProblemId = pvm.Id;
+            cvm.Notes = "Corpuz has bad RAM. Burner to fix it";
+            cvm.Add();
+            output.WriteLine("New Call Generated    -   Id  = " + cvm.Id);
+            int id = cvm.Id;    //need id for delete later
+            cvm.GetById();
+            cvm.Notes += "\n Ordered new RAM!";
+            if (cvm.Update()==1)
+            {
+                output.WriteLine("Call was updated " + cvm.Notes);
+            }
+            else
+            {
+                output.WriteLine("Call was not updated ");
+            }
+
+            cvm.Notes = "Another change to comments that should not work";
+
+            if(cvm.Update()==-2)
+            {
+                output.WriteLine("Call was not updated, data was stale ");
+            }
+            cvm = new CallViewModel
+            {
+                Id=id
+            };//need to reset because of concurrency occur
+            
+            cvm.GetById();
+
+            if(cvm.Delete()==1)
+            {
+                output.WriteLine("Call was deleted ");
+            }
+            else
+            {
+                output.WriteLine("Call was not deleted ");
+            }
+            cvm.GetById();
+            // Exception ex = Assert.Throws<NullReferenceException>(() => cvm.GetById());//should throw expected exception
+            //  Assert.Equal("Object reference not set to an instance of an object.", ex.Message);
+
+        }
+
+
     }
 }

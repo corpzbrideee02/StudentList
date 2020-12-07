@@ -8,48 +8,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HelpdeskDAL
 {
-    public class EmployeeDAO
+    public class CallDAO
     {
-        readonly IRepository<Employees> repository;
+        readonly IRepository<Calls> repository;
 
-        public EmployeeDAO()
+        public CallDAO()
         {
-            repository = new HelpdeskRepository<Employees>();
+            repository = new HelpdeskRepository<Calls>();
         }
 
-
-        public Employees GetByEmail(string email)
-        {
-            try
-            {
-                return repository.GetByExpression(emp => emp.Email == email).FirstOrDefault();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Problem in " + GetType().Name + " " +
-                    MethodBase.GetCurrentMethod().Name + " " + ex.Message);
-                throw ex;
-            }
-        }
-
-        public Employees GetByLastName(string name)
-        {
-            Employees selectedEmployee = null;
-            try
-            {
-                HelpdeskContext _db = new HelpdeskContext();
-                selectedEmployee = _db.Employees.FirstOrDefault(emp => emp.LastName == name);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Problem in " + GetType().Name + " " +
-                    MethodBase.GetCurrentMethod().Name + " " + ex.Message);
-                throw ex;
-            }
-            return selectedEmployee;
-        }
-
-        public Employees GetById(int id)
+        public Calls GetById(int id)
         {
             try
             {
@@ -62,12 +30,11 @@ namespace HelpdeskDAL
                 throw ex;
             }
         }
-
-        public List<Employees> GetAll()
+        public List<Calls> GetAll()
         {
+
             try
             {
-
                 return repository.GetAll();
             }
             catch (Exception ex)
@@ -78,11 +45,11 @@ namespace HelpdeskDAL
             }
         }
 
-        public int Add(Employees newEmployee)
+        public int Add(Calls newCall)
         {
             try
             {
-                newEmployee = repository.Add(newEmployee);
+                newCall = repository.Add(newCall);
             }
             catch (Exception ex)
             {
@@ -90,7 +57,7 @@ namespace HelpdeskDAL
                     MethodBase.GetCurrentMethod().Name + " " + ex.Message);
                 throw ex;
             }
-            return newEmployee.Id;
+            return newCall.Id;
         }
 
         public int Delete(int id)
@@ -107,15 +74,13 @@ namespace HelpdeskDAL
             }
         }
 
-
-
-        public UpdateStatus Update(Employees updatedEmployee)
+        public UpdateStatus Update(Calls updatedCalls)
         {
 
             UpdateStatus operationStatus = UpdateStatus.Failed;
             try
             {
-                operationStatus = repository.Update(updatedEmployee);
+                operationStatus = repository.Update(updatedCalls);
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -132,6 +97,8 @@ namespace HelpdeskDAL
             }
             return operationStatus;
         }
+
+
 
     }
 }

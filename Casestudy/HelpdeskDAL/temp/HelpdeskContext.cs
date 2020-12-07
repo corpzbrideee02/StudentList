@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace HelpdeskDAL
+namespace HelpdeskDAL.temp
 {
     public partial class HelpdeskContext : DbContext
     {
@@ -15,10 +15,10 @@ namespace HelpdeskDAL
         {
         }
 
+        public virtual DbSet<Calls> Calls { get; set; }
         public virtual DbSet<Departments> Departments { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<Problems> Problems { get; set; }
-        public virtual DbSet<Calls> Calls { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -26,12 +26,46 @@ namespace HelpdeskDAL
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=(localdb)\\ProjectsV13;Database=helpdeskDB;Trusted_Connection=True;");
-                optionsBuilder.UseLazyLoadingProxies();
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Calls>(entity =>
+            {
+                entity.Property(e => e.DateClosed).HasColumnType("smalldatetime");
+
+                entity.Property(e => e.DateOpened).HasColumnType("smalldatetime");
+
+                entity.Property(e => e.Notes)
+                    .IsRequired()
+                    .HasMaxLength(250)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Timer)
+                    .IsRequired()
+                    .IsRowVersion()
+                    .IsConcurrencyToken();
+
+                entity.HasOne(d => d.Employee)
+                    .WithMany(p => p.CallsEmployee)
+                    .HasForeignKey(d => d.EmployeeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_CallHasEmployee");
+
+                entity.HasOne(d => d.Problem)
+                    .WithMany(p => p.Calls)
+                    .HasForeignKey(d => d.ProblemId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_CallHasProblem");
+
+                entity.HasOne(d => d.Tech)
+                    .WithMany(p => p.CallsTech)
+                    .HasForeignKey(d => d.TechId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_CallHasTech");
+            });
+
             modelBuilder.Entity<Departments>(entity =>
             {
                 entity.Property(e => e.DepartmentName)
