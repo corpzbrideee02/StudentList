@@ -57,7 +57,6 @@ namespace ExercisesDAL
             List<Courses> studentCourse = new List<Courses>();
 
            List<Grades> studentGrades = repositoryG.GetAll();
-          // Students stud=repositoryS.GetByExpression(stu => stu.Id == id).FirstOrDefault();
 
             try
             {

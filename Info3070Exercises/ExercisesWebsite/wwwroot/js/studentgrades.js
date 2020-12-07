@@ -78,7 +78,7 @@ $(function () { // studentgrades.js
 
 
 
-	};//loadDivisionDDL
+	};//loadCourseDDL
 
 	const thisStudentGradesDDL = async() => {
 		let response = await fetch(`api/grade/${sessionStorage.getItem('id')}`);
@@ -142,6 +142,7 @@ $(function () { // studentgrades.js
 		$("#CommentsRow").show();
 		$("#actionbutton").show();
 		$("#TextBoxComments").val("");
+		
 		sessionStorage.setItem("courseId", parseInt($('#ddlCourses').val()));
 		studentgrades = JSON.parse(sessionStorage.getItem("studentgrades"));
 		let grade = studentgrades.find(g => g.courseId === parseInt($('#ddlCourses').val()));
@@ -164,7 +165,7 @@ $(function () { // studentgrades.js
 		} // clicked on row somewehere else
 		if (id !== "status" && id !== "heading") {
 			let data = JSON.parse(sessionStorage.getItem("allstudents"));
-			id === "0" ? setupForAdd() : setupForUpdate(id, data);
+			setupForUpdate(id, data);
 		} else {
 			return false; //ignore if they clicked on heading or status
 		}

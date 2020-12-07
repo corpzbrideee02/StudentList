@@ -40,19 +40,16 @@ namespace ExercisesDAL
 
             List<Grades> studentGradesFinal = new List<Grades>();
             List<Grades> studentGrades = repository.GetAll();
-          // Students stud = repositoryS.GetByExpression(stu => stu.Id == id).FirstOrDefault();
-          // Courses crs = repositoryC.GetByExpression(crs => crs.Id == csrId).FirstOrDefault();
             try
             {
                 foreach (Grades g in studentGrades)
                 {
-                    //if (g.StudentId == stuId && g.CourseId==csrId)
+
                      if (g.StudentId == id)
 
                         {
                             studentGradesFinal.Add(g);
-                            
-                    }
+                         }
                 }
             }
             catch (Exception ex)
