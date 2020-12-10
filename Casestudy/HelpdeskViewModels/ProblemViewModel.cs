@@ -50,7 +50,7 @@ namespace HelpdeskViewModels
             try
             {
                 Problems desc = _model.GetByDescription(Description);
-                Description = desc.Description;
+               // Description = desc.Description;
                 Id = desc.Id;
                 Timer = Convert.ToBase64String(desc.Timer);
             }

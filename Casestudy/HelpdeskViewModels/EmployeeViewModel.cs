@@ -126,7 +126,58 @@ namespace HelpdeskViewModels
 
         }
 
-        public List<EmployeeViewModel> GetAll()
+        public List<EmployeeViewModel> GetAllTech()
+        {
+            List<EmployeeViewModel> allVms = new List<EmployeeViewModel>();
+            try
+            {
+
+                List<Employees> allEmployees = _dao.GetAll();
+
+                foreach (Employees emp in allEmployees)
+                {
+
+                    if(emp.IsTech==true)
+                    {
+                        EmployeeViewModel empVm = new EmployeeViewModel();
+
+                        empVm.Title = emp.Title;
+                        empVm.Firstname = emp.FirstName;
+                        empVm.Lastname = emp.LastName;
+                        empVm.Phoneno = emp.PhoneNo;
+                        empVm.Email = emp.Email;
+                        empVm.Id = emp.Id;
+
+                        empVm.DepartmentId = emp.DepartmentId;
+                        empVm.DepartmentName = emp.Department.DepartmentName;
+                        empVm.Timer = Convert.ToBase64String(emp.Timer);
+                        if (emp.StaffPicture != null)
+                        {
+
+                            empVm.StaffPicture64 = Convert.ToBase64String(emp.StaffPicture);
+                        }
+
+                        //ADDTHIS
+                        empVm.isTech = emp.IsTech ?? false;
+
+                        allVms.Add(empVm);
+                    }
+                    
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Problem in " + GetType().Name + " " +
+                    MethodBase.GetCurrentMethod().Name + " " + ex.Message);
+                throw ex;
+            }
+            return allVms;
+
+        }
+
+            public List<EmployeeViewModel> GetAll()
         {
             List<EmployeeViewModel> allVms = new List<EmployeeViewModel>();
             try
@@ -137,12 +188,14 @@ namespace HelpdeskViewModels
                 foreach (Employees emp in allEmployees)
                 {
                     EmployeeViewModel empVm = new EmployeeViewModel();
+                   
                     empVm.Title = emp.Title;
                     empVm.Firstname = emp.FirstName;
                     empVm.Lastname = emp.LastName;
                     empVm.Phoneno = emp.PhoneNo;
                     empVm.Email = emp.Email;
                     empVm.Id = emp.Id;
+                    
                     empVm.DepartmentId = emp.DepartmentId;
                      empVm.DepartmentName = emp.Department.DepartmentName;
                     empVm.Timer = Convert.ToBase64String(emp.Timer);
@@ -151,6 +204,10 @@ namespace HelpdeskViewModels
 
                         empVm.StaffPicture64 = Convert.ToBase64String(emp.StaffPicture);
                     }
+
+                    //ADDTHIS
+                    empVm.isTech = emp.IsTech ?? false;
+
                     allVms.Add(empVm);
                 }
 

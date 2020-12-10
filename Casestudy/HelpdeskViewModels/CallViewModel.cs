@@ -36,7 +36,7 @@ namespace HelpdeskViewModels
             try
             {
                 Calls cl = _dao.GetById(Id);
-             
+
                 Id = cl.Id;
                 EmployeeId = cl.EmployeeId;
                 ProblemId = cl.ProblemId;
@@ -51,6 +51,7 @@ namespace HelpdeskViewModels
             catch (NullReferenceException nex)
             {
                 Debug.WriteLine(nex.Message);
+                throw nex;
             }
             catch (Exception ex)
             {
@@ -105,10 +106,10 @@ namespace HelpdeskViewModels
                 Calls cl = new Calls
                 {
 
-                    EmployeeId =EmployeeId,
+                    EmployeeId = EmployeeId,
                     ProblemId = ProblemId,
                     TechId = TechId,
-                    DateOpened =DateOpened,
+                    DateOpened = DateOpened,
                     DateClosed = DateClosed,
                     OpenStatus = OpenStatus,
                     Notes = Notes
@@ -131,13 +132,13 @@ namespace HelpdeskViewModels
             {
                 Calls emp = new Calls
                 {
-                    EmployeeId =EmployeeId,
+                    EmployeeId = EmployeeId,
                     ProblemId = ProblemId,
                     TechId = TechId,
-                    DateOpened =DateOpened,
+                    DateOpened = DateOpened,
                     DateClosed = DateClosed,
                     OpenStatus = OpenStatus,
-                    Id=Id,
+                    Id = Id,
                     Notes = Notes
                 };
 

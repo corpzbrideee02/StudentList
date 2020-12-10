@@ -104,6 +104,15 @@ namespace CaseStudyTests
 
         }
 
+
+        [Fact]
+        public void Call_GetAllTest()
+        {
+            CallViewModel vm = new CallViewModel();
+            List<CallViewModel> allCallVms = vm.GetAll();
+            Assert.True(allCallVms.Count > 0);
+        }
+
         [Fact]
         public void Call_ComprehensiveVMTest()
         {
@@ -125,10 +134,10 @@ namespace CaseStudyTests
             cvm.Notes = "Corpuz has bad RAM. Burner to fix it";
             cvm.Add();
             output.WriteLine("New Call Generated    -   Id  = " + cvm.Id);
-            int id = cvm.Id;    //need id for delete later
-            cvm.GetById();
+            /*int id = cvm.Id;    //need id for delete later
+            cvm.GetById();*/
             cvm.Notes += "\n Ordered new RAM!";
-            if (cvm.Update()==1)
+            /*if (cvm.Update()==1)
             {
                 output.WriteLine("Call was updated " + cvm.Notes);
             }
@@ -157,10 +166,10 @@ namespace CaseStudyTests
             else
             {
                 output.WriteLine("Call was not deleted ");
-            }
-            cvm.GetById();
-            // Exception ex = Assert.Throws<NullReferenceException>(() => cvm.GetById());//should throw expected exception
-            //  Assert.Equal("Object reference not set to an instance of an object.", ex.Message);
+            }*/
+           // cvm.GetById();
+           // Exception ex = Assert.Throws<NullReferenceException>(() => cvm.GetById());//should throw expected exception
+           // Assert.Equal("Object reference not set to an instance of an object.", ex.Message);
 
         }
 
