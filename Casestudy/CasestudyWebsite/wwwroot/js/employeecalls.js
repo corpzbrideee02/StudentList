@@ -89,7 +89,8 @@ $(function () { // employeeaddupdate.js
 				//if call is closed
 				if (!cl.openStatus) {
 					$("#actionbutton").hide();
-
+					$("#DateClosedRow").show();
+					$("#CloseCallRow").show();
 					$("#DateClosed").text(formatDate(cl.dateClosed).replace("T", " "));
 					$("#selEmployee").attr('disabled', true);
 					$("#selProblem").attr('disabled', true);
