@@ -139,10 +139,10 @@ namespace HelpdeskViewModels
                     DateClosed = DateClosed,
                     OpenStatus = OpenStatus,
                     Id = Id,
-                    Notes = Notes
-                };
+                    Notes = Notes,
+                    Timer= Convert.FromBase64String(Timer)
+            };
 
-                emp.Timer = Convert.FromBase64String(Timer);
                 callUpdated = _dao.Update(emp);
 
             }

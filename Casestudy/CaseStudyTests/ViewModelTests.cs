@@ -73,6 +73,7 @@ namespace CaseStudyTests
             Assert.True(EmployeeUpdated > 0);
         }
 
+      
         [Fact]
         public void Employee_DeleteTest()
         {
@@ -122,7 +123,7 @@ namespace CaseStudyTests
             cvm.DateOpened = DateTime.Now;
             cvm.DateClosed = null;
             cvm.OpenStatus = true;
-            evm.Email = "dc@abc.com";
+            evm.Email = "case2@here.com";
             evm.GetByEmail();
             cvm.EmployeeId = evm.Id;
             evm.Email = "sc@abc.com";
@@ -134,10 +135,10 @@ namespace CaseStudyTests
             cvm.Notes = "Corpuz has bad RAM. Burner to fix it";
             cvm.Add();
             output.WriteLine("New Call Generated    -   Id  = " + cvm.Id);
-            /*int id = cvm.Id;    //need id for delete later
-            cvm.GetById();*/
+            //int id = cvm.Id;    //need id for delete later
+            cvm.GetById();
             cvm.Notes += "\n Ordered new RAM!";
-            /*if (cvm.Update()==1)
+            if (cvm.Update()==1)
             {
                 output.WriteLine("Call was updated " + cvm.Notes);
             }
@@ -152,10 +153,10 @@ namespace CaseStudyTests
             {
                 output.WriteLine("Call was not updated, data was stale ");
             }
-            cvm = new CallViewModel
+           /* cvm = new CallViewModel
             {
                 Id=id
-            };//need to reset because of concurrency occur
+            };//need to reset because of concurrency occur*/
             
             cvm.GetById();
 
@@ -166,7 +167,7 @@ namespace CaseStudyTests
             else
             {
                 output.WriteLine("Call was not deleted ");
-            }*/
+            }
            // cvm.GetById();
            // Exception ex = Assert.Throws<NullReferenceException>(() => cvm.GetById());//should throw expected exception
            // Assert.Equal("Object reference not set to an instance of an object.", ex.Message);

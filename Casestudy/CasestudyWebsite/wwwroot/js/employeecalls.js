@@ -1,5 +1,4 @@
-﻿
-$(function () { // employeeaddupdate.js
+﻿$(function () { // employeeaddupdate.js
 
 	const getAll = async (msg) => {
 		try {
@@ -78,8 +77,9 @@ $(function () { // employeeaddupdate.js
 				sessionStorage.setItem("problemId", cl.problemId);
 				sessionStorage.setItem("employeeId", cl.employeeId);
 				sessionStorage.setItem("techId", cl.techId);
-				sessionStorage.setItem("dateOpened", formatDate(cl.dateOpened).replace("T", " "));
+				sessionStorage.setItem("dateOpened", formatDate(cl.dateOpened));
 				sessionStorage.setItem("timer", cl.timer);
+				sessionStorage.setItem("openStatus", true);
 				$("#modalstatus").text("update data");
 				loadProblem(cl.problemId.toString());
 				loadEmployee(cl.employeeId.toString());
@@ -87,7 +87,7 @@ $(function () { // employeeaddupdate.js
 
 
 				//if call is closed
-				if (!cl.openStatus) {
+				if (cl.openStatus==false) {
 					$("#actionbutton").hide();
 					$("#DateClosedRow").show();
 					$("#CloseCallRow").show();
@@ -99,6 +99,7 @@ $(function () { // employeeaddupdate.js
 					$("#myCheck").prop('checked', true);
 				}
 				else {
+					$("#actionbutton").show();
 					$("#DateClosedRow").show();
 					$("#CloseCallRow").show();
 					$("#TextAreaNotes").attr('readonly', false);
@@ -107,7 +108,7 @@ $(function () { // employeeaddupdate.js
 					$("#selTechnician").attr('disabled', false);
 					$("#TextAreaNotes").attr('readonly', false);
 					$("#myCheck").prop('checked', false);
-                }
+				}
 
 				$("#theModal").modal("toggle");
 			} // if
@@ -124,6 +125,7 @@ $(function () { // employeeaddupdate.js
 		clearModalFields();
 		$("#DateOpened").text(formatDate().replace("T", " "));
 		sessionStorage.setItem("dateOpened", formatDate());
+		sessionStorage.setItem("openStatus", true);
 		$("#deletebutton").hide();
 	}; // setupForAdd
 
@@ -134,33 +136,34 @@ $(function () { // employeeaddupdate.js
 
 		$("#DateClosedRow").hide();
 		$("#CloseCallRow").hide();
-		
-		
-
 		$("#DateOpened").text("");
 		$("#TextAreaNotes").val("");
-
-
 		sessionStorage.removeItem("id");
 		sessionStorage.removeItem("problemId");
 		sessionStorage.removeItem("employeeId");
 		sessionStorage.removeItem("techId");
 		sessionStorage.removeItem("dateOpened");
+
+		sessionStorage.removeItem("dateClosed");
 		sessionStorage.removeItem("timer");
 
 
-		/*$("#selEmployee").attr('disabled', false);
+		sessionStorage.removeItem("openStatus");
+
+		$("#selEmployee").attr('disabled', false);
 		$("#selProblem").attr('disabled', false);
 		$("#selTechnician").attr('disabled', false);
-		$("#TextAreaNotes").attr('readonly', false);*/
-		//$("#myCheck").prop('checked', false);
+		$("#TextAreaNotes").attr('readonly', false);
+
+		$("#actionbutton").show();
+
 
 	}; // clearModalFields
 
 	const add = async () => {
 		try {
 			cl = new Object();
-			
+
 			cl.id = -1;
 			cl.timer = null;
 			cl.employeeId = parseInt($("#selEmployee").val());
@@ -199,7 +202,7 @@ $(function () { // employeeaddupdate.js
 
 	const update = async () => {
 		try {
-			
+
 			cl = new Object();
 
 			cl.id = parseInt(sessionStorage.getItem("id"));
@@ -208,18 +211,14 @@ $(function () { // employeeaddupdate.js
 			cl.problemId = parseInt($("#selProblem").val());
 			cl.techId = parseInt($("#selTechnician").val());
 			cl.dateOpened = sessionStorage.getItem("dateOpened");
-
 			cl.notes = $("#TextAreaNotes").val();
+			if (cl.openStatus) {
 
-			if (sessionStorage.getItem("openStatus")==true) {
-
-				cl.openStatus = true;
+				cl.dateClosed = formatDate();
 			}
 			else {
-				cl.openStatus = false;
-
-				cl.dateClosed = sessionStorage.getItem("dateClosed");
-            }
+				cl.dateClosed = formatDate();
+			}
 
 			// send the updated back to the server asynchronously using PUT
 			let response = await fetch("api/call", {
@@ -302,7 +301,7 @@ $(function () { // employeeaddupdate.js
 		(date === undefined) ? d = new Date() : d = new Date(Date.parse(date));
 		let _day = d.getDate();
 		if (_day < 10) { _day = "0" + _day; }
-		let _month = d.getMonth()+1;
+		let _month = d.getMonth() + 1;
 		if (_month < 10) { _month = "0" + _month; }
 		let _year = d.getFullYear();
 		let _hour = d.getHours();
@@ -324,14 +323,13 @@ $(function () { // employeeaddupdate.js
 	$("#myCheck").click(() => {
 		if ($("#myCheck").is(":checked")) {
 			$("#DateClosed").text(formatDate().replace("T", " "));
-			sessionStorage.setItem("dateClosed", formatDate());
+			sessionStorage.setItem("dateClosed", formatDate().replace("T", " "));
 			sessionStorage.setItem("openStatus", false);
 		}
 		else {
 			$("#DateClosed").text("");
 			sessionStorage.setItem("dateClosed", "");
-			sessionStorage.setItem("openStatus", true);
-        }
+		}
 	});
 
 
@@ -362,7 +360,7 @@ $(function () { // employeeaddupdate.js
 
 
 	const buildCallList = (data, usealldata = true) => {
-		btn = $(`<button class="list-group-item row d-flex" id="0"><img class="card-img" src="img/stu.png" alt="Add Call" style="width:5%; margin:0 auto;"></button>`);
+		btn = $(`<button class="list-group-item row d-flex" id="0"><img class="card-img" src="img/call.png" alt="Add Call" style="width:5%; margin:0 auto;"></button>`);
 
 		$("#callList").empty();
 		btn.appendTo($("#callList"));
@@ -376,8 +374,6 @@ $(function () { // employeeaddupdate.js
 		usealldata ? sessionStorage.setItem("allcalls", JSON.stringify(data)) : null;
 		data.map(emp => {
 			btn = $(`<button class="list-group-item row d-flex" id="${emp.id}">`);
-			//formatDate(cl.dateOpened).replace("T", " ")
-			//btn.html(`< div class= "col-4" id = "employeetitle${emp.id}" > ${emp.dateOpened }</div >
 			btn.html(`<div class="col-4" id="employeetitle${emp.id}">${formatDate(emp.dateOpened).replace("T", " ")}</div>
 					<div class="col-4" id="employeefname${emp.id}">${emp.employeeName}</div>
 					<div class="col-4" id="employeelastnam${emp.id}">${emp.problemDescription}</div>`
@@ -406,9 +402,3 @@ const errorRtn = (problemJson, status) => {
 		console.log(problem);
 	} // else
 }
-
-
-
-
-
-
